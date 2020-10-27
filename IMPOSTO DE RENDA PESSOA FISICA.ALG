@@ -1,188 +1,46 @@
-Algoritmo "semnome"
-// Disciplina   : [Linguagem e Lógica de Programação]
+Algoritmo "IMPOSTO DE RENDA PESSOA FISICA"
+// Disciplina   : [Lógica de Programação e Algoritimos]
 // Professor   : Robson Cavalcante
-// Descrição   : Atividade Prática Supervisionada
+// Descrição   : Calculo do imposto de renda pessoa física
 // Autor(a)    : Luiz Fernando de Morais
-// Data atual  : 12/10/2020
+// Data atual  : 27/10/2020
 Var
 // Seção de Declarações das variáveis
 
-// Variáveis de apresentação do menu -- //
+   verificador, verificacaoDeResposta: inteiro
 
-   opcaoAlgoritimo, temporizador, verificador, verificacaoDeResposta: inteiro
-   
    resposta, confirmar: caracter
-   
+
    salarioBrutoAnual, rendimentosBrutoAnual, baseCalculoTotal, despesas: real
    aliquota, totalIRPF, rendimentosTotais, baseValorTotal: real
    rendimentoLiquido: real
 
-// --- Variáveis do primeiro algorítimo [IMPOSTO DE RENDA] --- //
-
-
-   
-// --- Variáveis do segundo algorítimo [CONTROLE ACADÊMICO] --- //
-
-   media, mediaPonderada: real
-   
-// --- Variáveis do terceiro algorítimo [ELEIÇÃO PARA PRESIDENTE] --- //
-
-
-
-// --- Variáveis do quarto algorítimo [CÁLCULO DO CONSUMO DE ENERGIA] --- //
-
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc...
 
-   escreval("=================================================================")
-   escreval()
-   escreval("         |  |¯¯¯   |¯¯¯      |¯¯¯|  |¯¯¯| |¯¯¯     |¯¯|          ")
-   escreval("         |  |___   |___   -  |   |  |___| |___       /           ")
-   escreval("         |  |          |     |¯¯¯|  |         |     /            ")
-   escreval("         |  |___    ___|     |   |  |      ___|    /___          ")
-   escreval()
-   escreval("=================================================================")
-   escreval("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *")
-   escreval("")
-   
-   timer(3000)
-   limpatela
-   timer(0)
-   
-   // -------- Tela de notas importantes do programa -------- //
-
-   para temporizador de 1 ate 0 passo -1 faca
-     escreval("NOTAS IMPORTANTES!!!")
-     escreval(" - Para cada valor digitado errôneamente pelo usuário, haverá uma")
-     escreval("   validação.")
-     escreval(" - Caso seja solicitado um número INTEIRO para escolha de opções")
-     escreval("   e o usuário digite um número com ponto, o valor digitado")
-     escreval("   será arredondado para baixo.")
-     escreval(" - Se mesmo arredondado, o valor não estiver presente nas opções")
-     escreval("   será solicitado um novo valor ao usuário")
-     escreval()
-     escreval()
-     escreval()
-     escreval()
-     timer(700)
-     escreval(temporizador)
-     timer(0)
-     limpatela
-   fimpara
-
-   limpatela
-   
-   // ------ Tela de carregamento da sessão ------ //
-   
-   escreval("                              ** ")
-   escreval("                             *  0")
-   escreval("                              ** ")
-   escreval()
-   escreval()
-   escreval("              Aguarde enquanto carregamos o sistema")
-   timer(1000)
-   timer(0)
-   limpatela
-   
-   escreval("                              ** ")
-   escreval("                             *  *")
-   escreval("                              *0 ")
-   escreval()
-   escreval()
-   escreval("              Aguarde enquanto carregamos o sistema")
-   timer(1000)
-   timer(0)
-   limpatela
-   
-   escreval("                              ** ")
-   escreval("                             *  *")
-   escreval("                              0* ")
-   escreval()
-   escreval()
-   escreval("              Aguarde enquanto carregamos o sistema")
-   timer(1000)
-   timer(0)
-   limpatela
-   
-   escreval("                              ** ")
-   escreval("                             0  *")
-   escreval("                              ** ")
-   escreval()
-   escreval()
-   escreval("              Aguarde enquanto carregamos o sistema")
-   timer(1000)
-   timer(0)
-   limpatela
-   escreval("                              0* ")
-   escreval("                             *  *")
-   escreval("                              ** ")
-   escreval()
-   escreval()
-   escreval("              Aguarde enquanto carregamos o sistema")
-   timer(1000)
-   timer(0)
-   limpatela
-   
-   escreval("                              *0 ")
-   escreval("                             *  *")
-   escreval("                              ** ")
-   escreval()
-   escreval()
-   escreval("              Aguarde enquanto carregamos o sistema")
-   limpatela
-
-   escreval()
-   escreval("Escolha uma das opções de algorítimos do menu abaixo:")
-   escreval()
-   escreval("|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|")
-   escreval("| 1 - Imposto de Renda               |")
-   escreval("| 2 - Controle Acadêmico             |")
-   escreval("| 3 - Eleição para Presidente        |")
-   escreval("| 4 - Cálculo do Consumo de Energia  |")
-   escreval("|____________________________________|")
-   escreval("")
-   
-
-   leia(opcaoAlgoritimo)
-   
-   enquanto (opcaoAlgoritimo <= 0) ou (opcaoAlgoritimo > 4) faca
-     escreval("Por favor, digite um número válido entre 1 e 4")
-     leia(opcaoAlgoritimo)
-   fimenquanto
-   
-   
-   timer(2000)
-   limpatela
-   timer(0)
-   
-   
-   // De acordo com a escolha do usuário, o algorítimo X da APS será executado.
-   
-   se (opcaoAlgoritimo = 1) entao
-   
       escreval("Para o calculo do imposto de renda pessoa física, responda abaixo: ")
       escreval("Você é trabalhador assalariado? (S/N) ")
       leia (resposta)
       resposta <- maiusc(resposta)
-      
+
       se (resposta = "S") ou (resposta = "N") entao
         verificacaoDeResposta <- 1
       senao
         verificacaoDeResposta <- 0
       fimse
-      
+
       enquanto verificacaoDeResposta <> 1 faca
         escreval("Por favor, digite uma letra válida. 'S' para sim ou 'N' para não.")
         leia(resposta)
         resposta <- maiusc(resposta)
-        
+
         se (resposta = "S") ou (resposta = "N") entao
           verificacaoDeResposta <- 1
         senao
           verificacaoDeResposta <- 0
         fimse
       fimenquanto
-      
+
       se (resposta = "S") entao
         enquanto (confirmar <> "S") faca
            escreval("Por favor, digite o rendimento BRUTO ANUAL de salários")
@@ -194,21 +52,21 @@ Inicio
            confirmar <- maiusc(confirmar)
         fimenquanto
       fimse
-      
+
       escreval("O valor de R$", salarioBrutoAnual," foi adicionado a memória.")
-      
+
       timer(2000)
       limpatela
       timer(0)
-      
+
       //Seção que pergunta sobre a adição de outros rendimentos
-      
+
       escreval("Há subitens de declaração além dos salários? ex:")
       escreval("Aluguéis, vendas de imóveis, investimentos...")
       escreval("Digite 'S' para confirmar ou 'N' para seguir adiante")
       leia(resposta)
       resposta <- maiusc(resposta)
-      
+
       se (resposta = "S") ou (resposta = "N") entao
         verificacaoDeResposta <- 1
       senao
@@ -226,36 +84,36 @@ Inicio
           verificacaoDeResposta <- 0
         fimse
       fimenquanto
-      
+
       confirmar <- "N"
-      
+
       se (resposta = "S") entao
         enquanto (confirmar <> "S") faca
            escreval("Para seu auxílio, abaixo a lista de itens tributáveis")
            escreval("Segundo a Receita, são obrigados a declarar o Imposto de")
            escreval("Renda os contribuintes que:")
-           
+
            // Lista de itens tributáveis, pessoa física
 
            escreval(" - Receberam rendimentos isentos, não tributáveis ou ")
            escreval("   tributados exclusivamente na fonte (por exemplo: ")
            escreval("   indenizações trabalhistas, caderneta de poupança ou")
            escreval("   doações) em valor superior a R$ 40 mil.")
-           
+
            escreval(" - Obtiveram, em qualquer mês, ganhos na venda de bens ou")
            escreval("   direitos sujeitos à incidência de Imposto de Renda, como")
            escreval("   imóveis vendidos com lucro.")
-           
+
            escreval(" - Realizaram operações em bolsas de valores, de")
            escreval("   mercadorias, de futuros e assemelhadas (investimentos).")
-           
+
            escreval(" - Tiveram, no ano anterior, receita bruta em valor")
            escreval("   superior a R$ 142.798,50 em atividade rural.")
-           
+
            escreval(" - Tinham, em 31 de dezembro do ano anterior, a posse ou a")
            escreval("   propriedade de bens ou direitos, inclusive terra nua")
            escreval("   de valor total superior a R$ 300 mil.")
-           
+
            escreval(" - Passaram à condição de residentes no Brasil em qualquer")
            escreval("   mês e, nessa condição, encontravam-se em 31 de dezembro")
            escreval("   do ano anterior.")
@@ -268,23 +126,23 @@ Inicio
            leia(confirmar)
            confirmar <- maiusc(confirmar)
         fimenquanto
-        
+
         escreval("O valor de R$", rendimentosBrutoAnual," foi adicionado a memória.")
       fimse
-      
+
       timer(2000)
       limpatela
       timer(0)
-      
-      
+
+
       //Seção que pergunta sobre despesas
-      
+
       escreval("Há a possibilidade de declarar despesas para redução do valor")
       escreval("a ser pago. Ex: Gasto com dependentes, saúde, educação...")
       escreval("Digite 'S' para confirmar ou 'N' para seguir adiante")
       leia(resposta)
       resposta <- maiusc(resposta)
-      
+
       se (resposta = "S") ou (resposta = "N") entao
         verificacaoDeResposta <- 1
       senao
@@ -302,9 +160,9 @@ Inicio
           verificacaoDeResposta <- 0
         fimse
       fimenquanto
-      
+
       confirmar <- "N"
-      
+
       se (resposta = "S") entao
         enquanto (confirmar <> "S") faca
            escreval("Abaixo, uma lista com explicações básicas do que pode ser")
@@ -339,15 +197,15 @@ Inicio
            leia(confirmar)
            confirmar <- maiusc(confirmar)
          fimenquanto
-         
+
          escreval("O valor de R$", despesas," foi adicionado a memória.")
       fimse
-        
+
       timer(2000)
       limpatela
       timer(0)
 
-      
+
          // ------ Tela de carregamento da sessão ------ //
 
       escreval("                              ** ")
@@ -412,7 +270,7 @@ Inicio
       escreval("Nela é possível ver a base de cálculo, aliquota e parcela a.")
       escreval("reduzir do imposto de renda (valor fixo).")
       escreval("")
-      
+
       escreval("===================================================================")
       escreval("| BASE DE CÁLCULO (R$) | ALÍQUOTA (%) | PARCELA A DEDUZIR DO IRPF |")
       escreval("|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|¯¯¯¯¯¯¯¯¯¯¯¯¯¯|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|")
@@ -426,9 +284,9 @@ Inicio
       rendimentosTotais <- salarioBrutoAnual + rendimentosBrutoAnual
       baseValorTotal <- (salarioBrutoAnual + rendimentosBrutoAnual - despesas)
       baseCalculoTotal <- baseValorTotal / 12
-      
+
       // Uso de uma estrutura encadeada para definir o valor de alíquota //
-      
+
       se (baseCalculoTotal > 4664.68) entao
         aliquota <- 27.5
       senao
@@ -446,9 +304,9 @@ Inicio
          fimse
         fimse
       fimse
-      
+
       // ------------ Calculo do total de IRPF a ser pago -------- //
-      
+
       se (baseCalculoTotal <= 1903.98 ) entao
         totalIRPF <- 0
       senao
@@ -466,7 +324,7 @@ Inicio
           fimse
         fimse
       fimse
-      
+
       se (aliquota = 0) entao
         escreval("Com base na tabela acima, seus rendimentos, divididos pelos")
         escreval("meses do ano, se enquadram em isento.")
@@ -482,23 +340,16 @@ Inicio
         escreval("Com base na tabela acima, seus rendimentos - suas despesas")
         escreval("divididos pelos meses do ano, se enquadram em", aliquota,"%.")
       fimse
-      
+
       escreval("")
       escreval("Logo, o valor total a pagar, deduzindo a parcela única do IRPF.")
       escreval("Será de R$", totalIRPF:2:2,".")
-      
+
       rendimentoLiquido <- baseValorTotal - totalIRPF
-      
+
       escreval("")
       escreval("Seu rendimento liquido foi de: R$", rendimentoLiquido:2:2,".")
-   
-   fimse
-   se (opcaoAlgoritimo = 2) entao
-   fimse
-   se (opcaoAlgoritimo = 3) entao
-   fimse
-   se (opcaoAlgoritimo = 4) entao
-   fimse
 
-   
+
+
 Fimalgoritmo

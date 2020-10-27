@@ -1,6 +1,6 @@
 Algoritmo "MEDIA ALUNOS PONDERADA"
 // Disciplina   : [Lógica de Programação e Algoritimos]
-// Professor   : Robson
+// Professor   : Robson Cavalcante
 // Descrição   : Calcula a média ponderada dos alunos
 // Autor(a)    : Luiz Fernando de Morais
 // Data atual  : 25/10/2020
@@ -358,6 +358,12 @@ Inicio
       escreval("")
       escreval("Digite a quantidade de faltas deste aluno.")
       leia(faltasAluno)
+      
+      enquanto (faltasAluno < 0) ou (faltasAluno > diasLetivos) faca
+        escreval("Por favor, digite um número de faltas entre 0 e", diasLetivos)
+        leia(faltasAluno)
+      fimenquanto
+      
       frequencia <- (diasLetivos - faltasAluno) / diasLetivos * 100
 
       mediaFinal <- somaNotaAluno / numeroProvasTrabalhos
@@ -485,6 +491,12 @@ Inicio
       escreval("")
       escreval("Digite a quantidade de faltas deste aluno.")
       leia(faltasAluno)
+      
+      enquanto (faltasAluno < 0) ou (faltasAluno > diasLetivos) faca
+        escreval("Por favor, digite um número de faltas entre 0 e", diasLetivos)
+        leia(faltasAluno)
+      fimenquanto
+      
       frequencia <- (diasLetivos - faltasAluno) / diasLetivos * 100
 
       mediaProvas <- somaNotaAlunoProvas / numeroProvas
@@ -553,8 +565,8 @@ Inicio
     escreval("================================================================")
     escreval("")
     escreval("A média final da turma foi: ", mediaTurma:2:2)
-    escreval("O percentual de alunos aprovados foi: ", percentualAprovados, "%")
-    escreval("O percentual de alunos reprovados foi: ", percentualReprovados, "%")
+    escreval("O percentual de alunos aprovados foi: ", percentualAprovados:2:2, "%")
+    escreval("O percentual de alunos reprovados foi: ", percentualReprovados:2:2, "%")
    
    
    fimse

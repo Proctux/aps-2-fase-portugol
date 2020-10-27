@@ -1,8 +1,8 @@
-Algoritmo "ELEICOES2020"
-// Disciplina   : [Linguagem e Lógica de Programação]
-// Professor   : Antonio Carlos Nicolodi 
-// Descrição   : Aqui você descreve o que o programa faz! (função)
-// Autor(a)    : Nome do(a) aluno(a)
+Algoritmo "ELEICOES 2020"
+// Disciplina   : [Lógica de Programação e Algoritimo]
+// Professor   : Robson Cavalcante
+// Descrição   : Define as zonas e seções de eleição, realiza votação e elege presidente
+// Autor(a)    : Luiz Fernando de Morais
 // Data atual  : 25/10/2020
 Var
 // Seção de Declarações das variáveis 
@@ -93,8 +93,6 @@ Inicio
           se (secao = vetorSecao[numeroSecao]) entao
             escreval("Seção encontrada e armazena")
             secaoZonaConfirmada <- "S"
-          senao
-            escreval("Lamento, a seção digitada não existe nesta zona.")
           fimse
         fimpara
         

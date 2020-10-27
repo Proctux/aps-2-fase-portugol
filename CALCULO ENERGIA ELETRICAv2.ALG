@@ -1,6 +1,6 @@
 Algoritmo "CALCULO ENERGIA ELETRICA"
 // Disciplina   : [Lógica de Programação e Algoritimos]
-// Professor   : Robson
+// Professor   : Robson Cavalcante
 // Descrição   : Calcula o consumo de energia para 10 usuarios em dois meses
 // Autor(a)    : Luiz Fernando de Morais
 // Data atual  : 26/10/2020
